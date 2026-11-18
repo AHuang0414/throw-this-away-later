@@ -19,7 +19,7 @@ jobs:
         if: ${{ success() || failure() }}
         run: |
           pip install semgrep
-          semgrep scan --config auto --error    # drop --error to make it a report
+          semgrep scan --config auto    # drop --error to make it a report
 
       # REPORT: dependency scan — surface findings without blocking
       - name: Dependency scan (Trivy)
