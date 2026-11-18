@@ -1,0 +1,11 @@
+
+title = "DevSecOps Security Lab"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "lab-fake-aws-key"
+description = "Detect the planted example AWS key"
+regex = '''AKIAIOSFODNN7EXAMPLE'''
+path = '''(^|/)config\.py$'''
